@@ -4,28 +4,46 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Mail, MapPin, Phone, Send } from 'lucide-react';
+import emailjs from '@emailjs/browser';
+import { useRef } from 'react';
+import { toast } from 'sonner';
 
 const Contact = () => {
+
+  const formRef = useRef(null);
+
   const contactInfo = [
     {
       icon: Mail,
       label: 'Email',
-      value: 'hello@example.com',
-      href: 'mailto:hello@example.com'
+      value: 'leslie2000abayo@gmail.com',
+      href: 'mailto:leslie2000abayo@gmail.com'
     },
     {
       icon: Phone,
       label: 'Phone',
-      value: '+1 (555) 123-4567',
-      href: 'tel:+15551234567'
+      value: '+254 742594202',
+      href: 'tel:+254 74259420'
     },
     {
       icon: MapPin,
       label: 'Location',
-      value: 'New York, NY',
-      href: '#'
+      value: 'Nairobi, KE',
+      href: null
     }
   ];
+
+  const sendEmail = (e) =>{
+    e.preventDefault();
+    emailjs.sendForm( "service_3674fa9", "template_2jtxsia", formRef.current, "Z-CZIlGoJAqyuvpFi").then( 
+      ()=>{
+        toast.success("message sent succussfully")
+        formRef.current.reset()
+      }).catch( (error)=>{
+        toast.error("Failed to send message, try again later")
+        console.log(error.text)
+      })
+  }
 
   return (
     <section id="contact" className="py-24 bg-background">
@@ -94,7 +112,7 @@ const Contact = () => {
             viewport={{ once: true }}
           >
             <Card className="p-8 bg-card border-border">
-              <form className="space-y-6">
+              <form className="space-y-6" onSubmit={(e) => sendEmail(e)} ref={formRef}>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div>
                     <label className="block text-sm font-medium text-foreground mb-2">
@@ -103,6 +121,8 @@ const Contact = () => {
                     <Input 
                       placeholder="John"
                       className="bg-background border-border focus:border-primary"
+                      name="first_name"
+                      required
                     />
                   </div>
                   <div>
@@ -112,6 +132,8 @@ const Contact = () => {
                     <Input 
                       placeholder="Doe"
                       className="bg-background border-border focus:border-primary"
+                      name="last_name"
+                      required
                     />
                   </div>
                 </div>
@@ -122,18 +144,22 @@ const Contact = () => {
                   </label>
                   <Input 
                     type="email"
-                    placeholder="john@example.com"
+                    name="email"
+                    placeholder="Enter your email"
                     className="bg-background border-border focus:border-primary"
+                    required
                   />
                 </div>
                 
                 <div>
-                  <label className="block text-sm font-medium text-foreground mb-2">
+                  <label  className="block text-sm font-medium text-foreground mb-2">
                     Subject
                   </label>
                   <Input 
                     placeholder="Let's work together"
                     className="bg-background border-border focus:border-primary"
+                    name="subject"
+                    required
                   />
                 </div>
                 
@@ -145,6 +171,8 @@ const Contact = () => {
                     placeholder="Tell me about your project..."
                     rows={6}
                     className="bg-background border-border focus:border-primary resize-none"
+                    name="message"
+                    required
                   />
                 </div>
                 

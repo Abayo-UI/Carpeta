@@ -1,8 +1,11 @@
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { Download, Github, Linkedin } from 'lucide-react';
+import { toast} from "sonner"
 
 const Hero = () => {
+
+  
   return (
     <section
       id="home"
@@ -76,7 +79,8 @@ const Hero = () => {
               <Button
                 size="lg"
                 className="bg-primary hover:bg-primary/90 text-primary-foreground shadow-cyan hover:shadow-cyan/70 transition-all duration-300 hover:scale-105"
-              >
+                onClick={ () => toast.success("Cv downloading")}
+               >
                 <Download className="mr-2 h-5 w-5" />
                 Download CV
               </Button>

@@ -30,15 +30,15 @@ const Navigation = () => {
 
       for (const section of sections) {
         if (section) {
-          const offsetTop = section.offsetTop; // measuring top of the page up to the top of that section
-          const offsetHeight = section.offsetHeight; //measures the total height of that section
+          const offsetTop = section.offsetTop;
+          const offsetHeight = section.offsetHeight;
 
           if (
             scrollPosition >= offsetTop &&
             scrollPosition < offsetTop + offsetHeight
           ) {
             setActiveSection(section.id);
-            break; //to prevent the other items in the array from being iterated
+            break;
           }
         }
       }
@@ -52,6 +52,7 @@ const Navigation = () => {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
+          {/* Profile Image */}
           <motion.img
             src="/profile.png"
             alt="Profile"
@@ -59,15 +60,15 @@ const Navigation = () => {
             initial={{ boxShadow: "none" }}
             animate={{
               boxShadow: [
-                "-5px -5px 10px 0px #21DFE2", // top-left
-                "0px -7px 10px 0px #21DFE2", // top
-                "5px -5px 10px 0px #21DFE2", // top-right
-                "7px 0px 10px 0px #21DFE2", // right
-                "5px 5px 10px 0px #21DFE2", // bottom-right
-                "0px 7px 10px 0px #21DFE2", // bottom
-                "-5px 5px 10px 0px #21DFE2", // bottom-left
-                "-7px 0px 10px 0px #21DFE2", // left
-                "-5px -5px 10px 0px #21DFE2", // loop back to start
+                "-5px -5px 10px 0px #21DFE2",
+                "0px -7px 10px 0px #21DFE2",
+                "5px -5px 10px 0px #21DFE2",
+                "7px 0px 10px 0px #21DFE2",
+                "5px 5px 10px 0px #21DFE2",
+                "0px 7px 10px 0px #21DFE2",
+                "-5px 5px 10px 0px #21DFE2",
+                "-7px 0px 10px 0px #21DFE2",
+                "-5px -5px 10px 0px #21DFE2",
               ],
             }}
             transition={{
@@ -78,7 +79,7 @@ const Navigation = () => {
             }}
           />
 
-          {/* Navigation Items */}
+          {/* Desktop Nav */}
           <div className="hidden md:flex space-x-8">
             {navItems.map((item) => (
               <button
@@ -103,11 +104,11 @@ const Navigation = () => {
             ))}
           </div>
 
-          {/* Mobile menu button */}
+          {/* Mobile Menu Button - White Hamburger Icon */}
           <Button
             variant="ghost"
             size="sm"
-            className="md:hidden text-foreground hover:text-primary"
+            className="md:hidden text-white hover:text-primary"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
             <svg
@@ -115,6 +116,7 @@ const Navigation = () => {
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
             >
               <path
                 strokeLinecap="round"
@@ -122,15 +124,15 @@ const Navigation = () => {
                 strokeWidth={2}
                 d={
                   isMobileMenuOpen
-                    ? "M6 18L18 6M6 6l12 12"
-                    : "M4 6h16M4 12h16M4 18h16"
+                    ? "M6 18L18 6M6 6l12 12" // X icon
+                    : "M4 6h16M4 12h16M4 18h16" // Hamburger
                 }
               />
             </svg>
           </Button>
         </div>
 
-        {/* Mobile menu */}
+        {/* Mobile Nav Menu */}
         {isMobileMenuOpen && (
           <div className="md:hidden border-t border-border bg-background/95 backdrop-blur-md">
             <div className="px-4 py-2 space-y-1">

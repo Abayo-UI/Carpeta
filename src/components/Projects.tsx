@@ -33,7 +33,7 @@ const Projects = () => {
       title: 'LPL Tournament',
       description: 'LPL (Ludo Parchisi League) is a tournament app I developed to help players track their performance, view upcoming matches, and stay updated on tournament rules during the LPL competition.',
       image: '/responsive LPL.PNG',
-      tech: ['React', 'Progressive web App', 'Bootstrap CSS', 'CRA'],
+      tech: ['React', 'Progressive web App', 'Bootstrap CSS', 'CRA', 'D3.js'],
       liveUrl: 'https://ludo-parchisi-league.netlify.app/',
       githubUrl: 'https://github.com/Abayo-UI/Ludo-Parchisi-League'
     }
