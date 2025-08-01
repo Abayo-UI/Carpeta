@@ -75,14 +75,14 @@ const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.6, duration: 0.8 }}
           >
-            <a href="/Cover_Letter.docx">
+            <a href="/Leslie-Abayo-Resume.pdf">
               <Button
                 size="lg"
                 className="bg-primary hover:bg-primary/90 text-primary-foreground shadow-cyan hover:shadow-cyan/70 transition-all duration-300 hover:scale-105"
-                onClick={ () => toast.success("Cv downloading...")}
+                onClick={ () => toast.success("Resume downloading...")}
                >
                 <Download className="mr-2 h-5 w-5" />
-                Download CV
+                Download Resume
               </Button>
             </a>
 
