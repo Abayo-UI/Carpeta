@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { Card } from '@/components/ui/card';
 import { FaReact, FaJs, FaBootstrap, FaNodeJs, FaHtml5, FaCss3, FaSass } from "react-icons/fa"
-import { SiReactrouter, SiTailwindcss, SiGit, SiExpress, SiNpm, SiPostgresql, SiMongodb, SiPostman, SiJsonwebtokens} from 'react-icons/si';
+import { SiReactrouter, SiFramer, SiTailwindcss, SiGit, SiExpress, SiNpm, SiPostgresql, SiMongodb, SiPostman, SiJsonwebtokens} from 'react-icons/si';
 import React from 'react';
 
 const Skills = () => {
@@ -65,6 +65,12 @@ const Skills = () => {
       name: 'Npm',
       category: 'Package manager',
       icon: SiNpm,
+      color: 'from-purple-500 to-pink-500'
+    }, 
+    {
+      name: 'Framer-Motion',
+      category: 'React animation library',
+      icon: SiFramer,
       color: 'from-purple-500 to-pink-500'
     }
   ];

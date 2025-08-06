@@ -184,7 +184,7 @@ const Certificates = () => {
                 initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ delay: index * 0.2, duration: 0.8 }}
-                viewport={{ once: true }}
+                viewport={{ once: false }}
                 whileHover={{ scale: 1.02 }}
               >
                 <Card className="p-6 bg-card border-border hover:border-primary/50 transition-all duration-300 hover:shadow-cyan/20 hover:shadow-lg h-full">

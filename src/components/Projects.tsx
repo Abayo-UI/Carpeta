@@ -73,8 +73,7 @@ const Projects = () => {
                 <div className="relative overflow-hidden h-48 bg-dark-surface">
                   <div className="absolute inset-0 bg-gradient-primary opacity-20" />
                   <div className="absolute inset-0 flex items-center justify-center">
-                    {/* <div className="text-4xl text-primary/50"></div> */}
-                    <img src={project.image}/>
+                       <img src={project.image}/>
                   </div>
                   <div className="absolute inset-0 bg-primary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 </div>

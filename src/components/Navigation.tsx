@@ -51,8 +51,9 @@ const Navigation = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center py-4">
+        <div className="flex justify-between items-center py-1">
           {/* Profile Image */}
+
           <motion.img
             src="/profile.png"
             alt="Profile"
@@ -72,7 +73,7 @@ const Navigation = () => {
               ],
             }}
             transition={{
-              duration: 2,
+              duration: 5,
               repeat: Infinity,
               repeatType: "loop",
               ease: "easeInOut",
@@ -92,6 +93,7 @@ const Navigation = () => {
                 }`}
               >
                 {item.label}
+                {/* This is the line that appears below our nav items */}
                 {activeSection === item.id && (
                   <motion.div
                     className="absolute bottom-0 left-0 right-0 h-0.5 bg-primary rounded-full"

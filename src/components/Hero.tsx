@@ -6,7 +6,7 @@ import { toast} from "sonner"
 const Hero = () => {
 
   
-  return (
+  return ( 
     <section
       id="home"
       className="pt-24 md:pt-28 min-h-screen flex items-center justify-center bg-gradient-dark relative overflow-hidden"
@@ -76,6 +76,17 @@ const Hero = () => {
             transition={{ delay: 0.6, duration: 0.8 }}
           >
             <a href="/Leslie-Abayo-Resume.pdf">
+              <Button
+                size="lg"
+                className="bg-primary hover:bg-primary/90 text-primary-foreground shadow-cyan hover:shadow-cyan/70 transition-all duration-300 hover:scale-105"
+                onClick={ () => toast.success("Openinig Resume...")}
+               >
+                preview Resume
+              </Button>
+            </a>
+
+
+            <a href="/Leslie-Abayo-Resume.pdf" download>
               <Button
                 size="lg"
                 className="bg-primary hover:bg-primary/90 text-primary-foreground shadow-cyan hover:shadow-cyan/70 transition-all duration-300 hover:scale-105"
