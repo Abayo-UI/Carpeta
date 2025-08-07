@@ -171,20 +171,32 @@ const Certificates = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-6xl font-bold mb-6">
-            Certificates <span className="text-primary">&amp; Achievements</span>
+            Certificates{" "}
+            <span className="text-primary">&amp; Achievements</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             Continuous learning and professional development certifications
           </p>
-          <a href="MergedCertificates.pdf" target="_blank">
+          <motion.div
+            initial={{ y: 0 }}
+            animate={{ y: [0, -15, 0] }}
+            transition={{
+              duration: 2,
+              repeat: Infinity,
+              repeatType: "loop",
+              ease: "easeInOut",
+            }}
+          >
+            <a href="MergedCertificates.pdf" target="_blank">
               <Button
                 size="lg"
-                className="mt-2 bg-primary hover:bg-primary/90 text-primary-foreground shadow-cyan hover:shadow-cyan/70 transition-all duration-300 hover:scale-105"
-                onClick={ () => toast.success("Openinig Certificates...")}
-               >
+                className="mt-4 bg-primary hover:bg-primary/90 text-primary-foreground shadow-cyan hover:shadow-cyan/70 transition-all duration-300 hover:scale-105"
+                onClick={() => toast.success("Opening Certificates...")}
+              >
                 Click to view all Certificates
               </Button>
             </a>
+          </motion.div>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -213,7 +225,9 @@ const Certificates = () => {
                           <h3 className="text-lg font-bold text-foreground">
                             {cert.title}
                           </h3>
-                          <p className="text-primary font-medium">{cert.issuer}</p>
+                          <p className="text-primary font-medium">
+                            {cert.issuer}
+                          </p>
                         </div>
                         <span className="text-sm text-muted-foreground bg-secondary px-2 py-1 rounded">
                           {cert.year}
