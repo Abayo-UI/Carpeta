@@ -110,7 +110,7 @@ const Navigation = () => {
           <Button
             variant="ghost"
             size="sm"
-            className="md:hidden text-white hover:text-primary"
+            className="md:hidden text-white hover:text-primary bg-transparent hover:bg-transparent focus:bg-transparent active:bg-transparent"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
             <svg

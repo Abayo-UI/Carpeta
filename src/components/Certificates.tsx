@@ -3,6 +3,7 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ExternalLink, Award } from "lucide-react";
 import { useState } from "react";
+import { toast } from "sonner";
 
 const IndividualCert = ({ value, showCertificate, setShowCertificate }) => {
   return (
@@ -175,6 +176,15 @@ const Certificates = () => {
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             Continuous learning and professional development certifications
           </p>
+          <a href="MergedCertificates.pdf" target="_blank">
+              <Button
+                size="lg"
+                className="mt-2 bg-primary hover:bg-primary/90 text-primary-foreground shadow-cyan hover:shadow-cyan/70 transition-all duration-300 hover:scale-105"
+                onClick={ () => toast.success("Openinig Certificates...")}
+               >
+                Click to view all Certificates
+              </Button>
+            </a>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
