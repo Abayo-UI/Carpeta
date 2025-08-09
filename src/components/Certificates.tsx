@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ExternalLink, Award } from "lucide-react";
@@ -10,9 +10,11 @@ const IndividualCert = ({ value, showCertificate, setShowCertificate }) => {
     <>
       {showCertificate && (
         <motion.div
+          key="certificate"
           className="mt-2 rounded-lg z-[10] absolute shadow-lg"
-          initial={{ opacity: 0, y: -30 }}
+          initial={{ opacity: 0, y: -30, scale: 1 }}
           animate={{ opacity: 1, y: -230 }}
+          exit={{ opacity: 0, scale: 0.2 }}
           transition={{ duration: 0.5, ease: "easeOut" }}
         >
           <div
@@ -38,7 +40,7 @@ const IndividualCert = ({ value, showCertificate, setShowCertificate }) => {
           </div>
         </motion.div>
       )}
-    </>
+   </>
   );
 };
 
@@ -265,15 +267,17 @@ const Certificates = () => {
                 </Card>
               </motion.div>
 
-              {showCertificate && certId === index && (
-                <div className="flex items-start justify-center relative z-[20]">
-                  <IndividualCert
-                    value={cert.imageUrl}
-                    showCertificate={showCertificate}
-                    setShowCertificate={setShowCertificate}
-                  />
-                </div>
-              )}
+              <AnimatePresence mode="wait">
+                {showCertificate && certId === index && (
+                  <div className="flex items-start justify-center relative z-[20]">
+                    <IndividualCert
+                      value={cert.imageUrl}
+                      showCertificate={showCertificate}
+                      setShowCertificate={setShowCertificate}
+                    />
+                  </div>
+                )}
+              </AnimatePresence>
             </div>
           ))}
         </div>
