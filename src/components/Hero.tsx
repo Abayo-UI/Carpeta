@@ -109,7 +109,7 @@ const Hero = () => {
             </a>
 
             <a
-              href="https://www.linkedin.com/in/leslie-abayo-bba046265/"
+              href="https://www.linkedin.com/in/leslieabayo?trk=contact-info"
               target="_blank"
             >
               <Button
