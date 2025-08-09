@@ -12,8 +12,8 @@ const IndividualCert = ({ value, showCertificate, setShowCertificate }) => {
         <motion.div
           key="certificate"
           className="mt-2 rounded-lg z-[10] absolute shadow-lg"
-          initial={{ opacity: 0, y: -30, scale: 1 }}
-          animate={{ opacity: 1, y: -230 }}
+          initial={{ opacity: 0, y: -230, scale: 0.2 }}
+          animate={{ opacity: 1, y: -230, scale: 1 }}
           exit={{ opacity: 0, scale: 0.2 }}
           transition={{ duration: 2, ease: "easeOut" }}
         >
