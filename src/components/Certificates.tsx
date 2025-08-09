@@ -15,7 +15,7 @@ const IndividualCert = ({ value, showCertificate, setShowCertificate }) => {
           initial={{ opacity: 0, y: -30, scale: 1 }}
           animate={{ opacity: 1, y: -230 }}
           exit={{ opacity: 0, scale: 0.2 }}
-          transition={{ duration: 0.5, ease: "easeOut" }}
+          transition={{ duration: 2, ease: "easeOut" }}
         >
           <div
             onClick={() => setShowCertificate(false)}
