@@ -75,7 +75,7 @@ const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.6, duration: 0.8 }}
           >
-            <a href="/Leslie-Abayo-Resume.pdf">
+            <a href="/Leslie-Abayo-Agwenge-Resume.pdf">
               <Button
                 size="lg"
                 className="bg-primary hover:bg-primary/90 text-primary-foreground shadow-cyan hover:shadow-cyan/70 transition-all duration-300 hover:scale-105"
@@ -86,7 +86,7 @@ const Hero = () => {
             </a>
 
 
-            <a href="/Leslie-Abayo-Resume.pdf" download>
+            <a href="/Leslie-Abayo-Agwenge-Resume.pdf" download>
               <Button
                 size="lg"
                 className="bg-primary hover:bg-primary/90 text-primary-foreground shadow-cyan hover:shadow-cyan/70 transition-all duration-300 hover:scale-105"
