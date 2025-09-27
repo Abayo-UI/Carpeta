@@ -55,7 +55,7 @@ const Navigation = () => {
           {/* Profile Image */}
 
           <motion.img
-            src="/profile.png"
+            src="/profile2.png"
             alt="Profile"
             className="w-16 h-16 rounded-full object-cover"
             initial={{ boxShadow: "none" }}

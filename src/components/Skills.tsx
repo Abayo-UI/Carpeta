@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { Card } from '@/components/ui/card';
 import { FaReact, FaJs, FaBootstrap, FaNodeJs, FaHtml5, FaCss3, FaSass } from "react-icons/fa"
-import { SiReactrouter, SiFramer, SiTailwindcss, SiGit, SiExpress, SiNpm, SiPostgresql, SiMongodb, SiPostman, SiJsonwebtokens, SiReactquery} from 'react-icons/si';
+import { SiReactrouter, SiFramer, SiTailwindcss, SiGit, SiExpress, SiNpm, SiPostgresql, SiMongodb, SiPostman, SiJsonwebtokens, SiReactquery, SiEjs, SiDaisyui, SiShadcnui} from 'react-icons/si';
 import React from 'react';
 
 const Skills = () => {
@@ -24,6 +24,18 @@ const Skills = () => {
       category: 'CSS Framework',
       icon: FaBootstrap,
       color: 'from-cyan-500 to-blue-500'
+    },
+    {
+      name: 'DaisyUI',
+      category: 'Tailwind CSS component library',
+      icon: SiDaisyui,
+      color: 'from-purple-500 to-pink-500'
+    },
+    {
+      name: 'Shadcn UI',
+      category: 'React component library',
+      icon: SiShadcnui,
+      color: 'from-purple-500 to-pink-500'
     },
     {
       name: 'Version Control',
@@ -92,6 +104,12 @@ const Skills = () => {
       name: 'Express.js',
       category: 'Backend Runtime',
       icon: SiExpress,
+      color: 'from-green-500 to-green-700'
+    },
+    {
+      name: 'Ejs',
+      category: 'templating engine',
+      icon: SiEjs,
       color: 'from-green-500 to-green-700'
     },
     {
