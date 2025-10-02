@@ -14,6 +14,14 @@ const Projects = () => {
       githubUrl: 'https://github.com/Abayo-UI/wholesale-management-system'
     },
     {
+      title: '  ECommerce Website',
+      description: 'EcoStore is a modern, responsive e-commerce web application built with React, TypeScript, and Vite. It features a clean UI, product catalog, category filtering, shopping cart, and checkout flow.',
+      image: '/responsiveEcostore.PNG',
+      tech: ['React.js', 'typescript', 'react-router', 'html-Css-Js', 'vite', 'tailwindcss', 'react-query', 'shadcn-ui'],
+      liveUrl: 'https://preeminent-tarsier-cebdbe.netlify.app/',
+      githubUrl: 'https://github.com/Abayo-UI/EcoStore-ecommerce-site'
+    },
+    {
       title: 'Recipe App',
       description: 'This React Recipe App is a web application that lets users browse, search, and view detailed recipes by fetching real-time data from a third-party API, offering an interactive and dynamic cooking experience.',
       image: '/responsiveRecipe2.PNG',
@@ -22,20 +30,28 @@ const Projects = () => {
       githubUrl: 'https://github.com/Abayo-UI/React-Recipe-App'
     },
     {
-      title: 'Weather App',
-      description: 'Interactive weather website with location-based forecasts and responsive design.',
-      image: '/weatherresponsive.PNG',
-      tech: ['React', 'API Intergration', 'Weather API', 'Bootstrap CSS'],
-      liveUrl: 'https://weather-app-chi-virid.vercel.app/',
-      githubUrl: 'https://github.com/Abayo-UI/Weather-App'
-    },
-    {
       title: 'LPL Tournament',
       description: 'LPL (Ludo Parchisi League) is a tournament app I developed to help players track their performance, view upcoming matches, and stay updated on tournament rules during the LPL competition.',
       image: '/responsive LPL.PNG',
       tech: ['React', 'Progressive web App', 'Bootstrap CSS', 'CRA', 'D3.js'],
       liveUrl: 'https://ludo-parchisi-league.netlify.app/',
       githubUrl: 'https://github.com/Abayo-UI/Ludo-Parchisi-League'
+    },
+    {
+      title: 'Recipe Hub v2',
+      description: 'Interactive recipe website with advanced search and filtering options.',
+      image: '/responsiveRecipeHub2.PNG',
+      tech: ['React', 'API Intergration', 'tailwindcss', 'Bootstrap CSS', 'typeScript'],
+      liveUrl: 'https://recipe-hub-mitx.vercel.app/',
+      githubUrl: 'https://github.com/Abayo-UI/Recipe-hub'
+    },
+    {
+      title: 'Weather App',
+      description: 'Interactive weather website with location-based forecasts and responsive design.',
+      image: '/weatherresponsive.PNG',
+      tech: ['React', 'API Intergration', 'Weather API', 'Bootstrap CSS'],
+      liveUrl: 'https://weather-app-chi-virid.vercel.app/',
+      githubUrl: 'https://github.com/Abayo-UI/Weather-App'
     }
   ];
 
