@@ -1,97 +1,103 @@
 import { motion } from 'framer-motion';
 import { Card } from '@/components/ui/card';
 import { FaReact, FaJs, FaBootstrap, FaNodeJs, FaHtml5, FaCss3, FaSass } from "react-icons/fa"
-import { SiReactrouter, SiFramer, SiTailwindcss, SiGit, SiExpress, SiNpm, SiPostgresql, SiMongodb, SiPostman, SiJsonwebtokens, SiReactquery, SiEjs, SiDaisyui, SiShadcnui} from 'react-icons/si';
+import { SiTypescript ,SiReactrouter, SiFramer, SiTailwindcss, SiGit, SiExpress, SiNpm, SiPostgresql, SiMongodb, SiPostman, SiJsonwebtokens, SiReactquery, SiEjs, SiDaisyui, SiShadcnui} from 'react-icons/si';
 import React from 'react';
 
 const Skills = () => {
   const frontendTechnologies = [
-    {
-      name: 'React',
-      category: 'Frontend Framework',
-      icon: FaReact,
-      color: 'from-blue-500 to-cyan-500'
-    },
+  {
+    name: 'TypeScropt',
+    category: 'A superset of js',
+    icon: SiTypescript,
+    color: 'from-purple-500 to-pink-500'
+  },
+  {
+    name: 'JavaScript',
+    category: 'Programming Language',
+    icon: FaJs,
+    color: 'from-yellow-500 to-orange-500'
+  },
+  {
+    name: 'React',
+    category: 'Frontend Framework',
+    icon: FaReact,
+    color: 'from-blue-500 to-cyan-500'
+  },
+  {
+    name: 'React router',
+    category: 'react library framework',
+    icon: SiReactrouter,
+    color: 'from-purple-500 to-pink-500'
+  },
+  {
+    name: 'React-Query',
+    category: 'React server state library',
+    icon: SiReactquery,
+    color: 'from-purple-500 to-pink-500'
+  },
+  {
+    name: 'DaisyUI',
+    category: 'Tailwind CSS component library',
+    icon: SiDaisyui,
+    color: 'from-purple-500 to-pink-500'
+  },
+  {
+    name: 'Shadcn UI',
+    category: 'React component library',
+    icon: SiShadcnui,
+    color: 'from-purple-500 to-pink-500'
+  },
+  {
+    name: 'Framer-Motion',
+    category: 'React animation library',
+    icon: SiFramer,
+    color: 'from-purple-500 to-pink-500'
+  },
+  {
+    name: 'Bootstrap CSS',
+    category: 'CSS Framework',
+    icon: FaBootstrap,
+    color: 'from-cyan-500 to-blue-500'
+  },
+  {
+    name: 'Tailwind css',
+    category: 'CSS Framework',
+    icon: SiTailwindcss,
+    color: 'from-purple-500 to-pink-500'
+  },
+  {
+    name: 'Preprocessor',
+    category: 'Preprocessor',
+    icon: FaSass,
+    color: 'from-purple-500 to-pink-500'
+  },
+  {
+    name: 'HTML',
+    category: 'Programming language',
+    icon: FaHtml5,
+    color: 'from-purple-500 to-pink-500'
+  },
+  {
+    name: 'CSS',
+    category: 'Programming Language',
+    icon: FaCss3,
+    color: 'from-purple-500 to-pink-500'
+  },
+  {
+    name: 'Npm',
+    category: 'Package manager',
+    icon: SiNpm,
+    color: 'from-purple-500 to-pink-500'
+  },
+  {
+    name: 'Version Control',
+    category: 'Version Control',
+    icon: SiGit,
+    color: 'from-orange-500 to-red-500'
+  }
+];
 
-    {
-      name: 'JavaScript',
-      category: 'Programming Language',
-      icon: FaJs,
-      color: 'from-yellow-500 to-orange-500'
-    },
-    {
-      name: 'Bootstrap CSS',
-      category: 'CSS Framework',
-      icon: FaBootstrap,
-      color: 'from-cyan-500 to-blue-500'
-    },
-    {
-      name: 'DaisyUI',
-      category: 'Tailwind CSS component library',
-      icon: SiDaisyui,
-      color: 'from-purple-500 to-pink-500'
-    },
-    {
-      name: 'Shadcn UI',
-      category: 'React component library',
-      icon: SiShadcnui,
-      color: 'from-purple-500 to-pink-500'
-    },
-    {
-      name: 'Version Control',
-      category: 'Version Control',
-      icon: SiGit,
-      color: 'from-orange-500 to-red-500'
-    },
-    {
-      name: 'HTML',
-      category: 'Programming language',
-      icon: FaHtml5,
-      color: 'from-purple-500 to-pink-500'
-    },
-    {
-      name: 'CSS',
-      category: 'Programming Language',
-      icon: FaCss3,
-      color: 'from-purple-500 to-pink-500'
-    },
-    {
-      name: 'Preprocessor',
-      category: 'Preprocessor',
-      icon: FaSass,
-      color: 'from-purple-500 to-pink-500'
-    },
-    {
-      name: 'React router',
-      category: 'react library framework',
-      icon: SiReactrouter,
-      color: 'from-purple-500 to-pink-500'
-    },
-    {
-      name: 'Tailwind css',
-      category: 'CSS Framework',
-      icon: SiTailwindcss,
-      color: 'from-purple-500 to-pink-500'
-    },
-    {
-      name: 'Npm',
-      category: 'Package manager',
-      icon: SiNpm,
-      color: 'from-purple-500 to-pink-500'
-    }, 
-    {
-      name: 'Framer-Motion',
-      category: 'React animation library',
-      icon: SiFramer,
-      color: 'from-purple-500 to-pink-500'
-    },
-    {
-      name: 'React-Query',
-      category: 'React server state library',
-      icon: SiReactquery,
-      color: 'from-purple-500 to-pink-500'
-    }
-  ];
 
   const backendTechnologies = [
     {
