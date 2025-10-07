@@ -7,7 +7,7 @@ import React from 'react';
 const Skills = () => {
   const frontendTechnologies = [
   {
-    name: 'TypeScropt',
+    name: 'TypeScript',
     category: 'A superset of js',
     icon: SiTypescript,
     color: 'from-purple-500 to-pink-500'
