@@ -14,20 +14,20 @@ const Projects = () => {
       githubUrl: 'https://github.com/Abayo-UI/wholesale-management-system'
     },
     {
-      title: '  ECommerce Website',
-      description: 'EcoStore is a modern, responsive e-commerce web application built with React, TypeScript, and Vite. It features a clean UI, product catalog, category filtering, shopping cart, and checkout flow.',
-      image: '/responsiveEcostore.PNG',
-      tech: ['React.js', 'typescript', 'react-router', 'html-Css-Js', 'vite', 'tailwindcss', 'react-query', 'shadcn-ui'],
-      liveUrl: 'https://preeminent-tarsier-cebdbe.netlify.app/',
-      githubUrl: 'https://github.com/Abayo-UI/EcoStore-ecommerce-site'
-    },
-    {
       title: 'Recipe App',
       description: 'This React Recipe App is a web application that lets users browse, search, and view detailed recipes by fetching real-time data from a third-party API, offering an interactive and dynamic cooking experience.',
       image: '/responsiveRecipe2.PNG',
       tech: ['React.js', 'Bootstrap', 'react-router', 'API intergration', 'vite'],
       liveUrl: 'https://react-recipe-app-umber.vercel.app/',
       githubUrl: 'https://github.com/Abayo-UI/React-Recipe-App'
+    },
+    {
+      title: '  ECommerce Website',
+      description: 'EcoStore is a modern, responsive e-commerce web application built with React, TypeScript, and Vite. It features a clean UI, product catalog, category filtering, shopping cart, and checkout flow.',
+      image: '/responsiveEcostore.PNG',
+      tech: ['React.js', 'typescript', 'react-router', 'html-Css-Js', 'vite', 'tailwindcss', 'react-query', 'shadcn-ui'],
+      liveUrl: 'https://preeminent-tarsier-cebdbe.netlify.app/',
+      githubUrl: 'https://github.com/Abayo-UI/EcoStore-ecommerce-site'
     },
     {
       title: 'LPL Tournament',
