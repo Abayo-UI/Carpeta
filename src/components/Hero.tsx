@@ -79,7 +79,7 @@ const Hero = () => {
               <Button
                 size="lg"
                 className="bg-primary hover:bg-primary/90 text-primary-foreground shadow-cyan hover:shadow-cyan/70 transition-all duration-300 hover:scale-105"
-                onClick={ () => toast.success("Openinig Resume...")}
+                onClick={ () => toast.success("Opening Resume...")}
                >
                 Preview Resume
               </Button>
